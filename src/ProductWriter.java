@@ -11,7 +11,7 @@ public static void main(String[] args)
 {
     boolean finished = false;
     Scanner in = new Scanner(System.in);
-    ArrayList<String> list = new ArrayList<>();
+    ArrayList<Product> list = new ArrayList<>();
     //This program saves information about a person based on user input
     System.out.println("Enter information for each product");
     do
@@ -21,7 +21,7 @@ public static void main(String[] args)
         String description = SafeInput.getNonZeroLenString(in, "Enter a description");
         double cost = SafeInput.getDouble(in, "Enter the cost of the product");
 
-        String productInfo = ID + ", " + name + ", " + description + ", " + "$" + cost + ".";
+        Product productInfo = new Product(ID,name,description,cost);
 
         list.add(productInfo);
 
@@ -43,9 +43,9 @@ public static void main(String[] args)
     try (BufferedWriter bw = new BufferedWriter(new FileWriter(file)))
     {
 
-        for (String recs : list)
+        for (Product p : list)
         {
-            bw.write(recs, 0, recs.length());
+            bw.write(p.toCSVRecord());
             bw.newLine();
         }
         bw.close();

@@ -5,8 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class ProductReader
 {
@@ -23,8 +21,8 @@ public class ProductReader
 
         if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION)
         {
-            System.out.println("ID      Name       Description    Cost");
-            System.out.println("===========================================");
+            System.out.println("ID      Name  Description Cost");
+            System.out.println("=====================================");
 
             target = chooser.getSelectedFile().toPath();
             String fileName = String.valueOf(target.getFileName());
