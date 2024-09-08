@@ -27,6 +27,10 @@ public static void main(String[] args)
 
         finished = SafeInput.getYNConfirm(in, "Is this all the information?");
 
+        System.out.println("JSON: " + productInfo.toJSONRecord());
+        System.out.println("XML: " + productInfo.toXMLRecord());
+        System.out.println("CVS: " + productInfo.toCSVRecord());
+
         in.nextLine();
 
     }while (!finished);

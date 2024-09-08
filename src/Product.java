@@ -78,9 +78,9 @@ public class Product
         String retString = "";
         char DQ = '\u0022';  // Assign the double quote char to a variable
         retString =  "{" + DQ + "ID" + DQ + ":" + DQ + this.ID + DQ + ",";
-        retString += DQ + "firstName" + DQ + ":" + DQ + this.name + DQ + ",";
-        retString += " " + DQ + "lastName"  + DQ + ":" + DQ + this.description + DQ + ",";
-        retString += " " + DQ + "Title" + DQ + ": " + DQ + this.cost + DQ + "}";
+        retString += DQ + "Name" + DQ + ":" + DQ + this.name + DQ + ",";
+        retString += " " + DQ + "Description"  + DQ + ":" + DQ + this.description + DQ + ",";
+        retString += " " + DQ + "Cost" + DQ + ": " + DQ + this.cost + DQ + "}";
 
         return retString;
     }
@@ -90,7 +90,7 @@ public class Product
     {
         String retString = "";
 
-        retString = "<Person>" + "<ID>" + this.ID + "</ID>";
+        retString = "<Product>" + "<ID>" + this.ID + "</ID>";
         retString += "<Name>" + this.name + "</Name>";
         retString += "<Description>" + this.description + "</Description>";
         retString += "<Cost>" + this.cost + "</Cost";
