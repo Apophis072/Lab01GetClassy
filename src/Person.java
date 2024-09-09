@@ -8,10 +8,10 @@ public class Person
         private String title;
         private int birthYear;
         static private int IDSeed = 1;
-        public String fullName;
-        public String formalName;
-        static public int getAge;
-        public int FutureAge;
+        private String fullName;
+        private String formalName;
+        private int getAge;
+        private int FutureAge;
     public Person(String ID, String firstName, String lastName, String title, int birthYear)
     {
         this.ID = ID;
